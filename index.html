@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07182b">
+  <meta name="description" content="SkyLens brings wind intelligence to outdoor athletes using Meta Glasses. Join the waitlist.">
+  <title>SkyLens — Wind Intelligence for Outdoor Athletes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#" aria-label="SkyLens home"><span class="brand-mark">✦</span> SkyLens</a>
+    <nav aria-label="Main navigation">
+      <a href="#sports">For athletes</a><a href="#features">Features</a><a href="#demo">Demo</a><a href="#gallery">Sports</a>
+    </nav>
+    <a class="nav-pill" href="#waitlist"><span class="infinity">∞</span> For Meta Glasses</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-art">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85" alt="Sunset over a mountain landscape">
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">WIND INTELLIGENCE FOR META GLASSES</p>
+          <h1>Read the wind.<br><span>Play your conditions.</span></h1>
+          <p class="hero-lede">A hands-free wind companion for golfers, tennis players, runners, cyclists, and outdoor athletes — built to make changing conditions easier to read.</p>
+          <div class="mini-features">
+            <span><b>↗</b> Wind direction</span><span><b>≋</b> Gust trends</span><span><b>◎</b> Play insights</span>
+          </div>
+          <a class="button button-light" href="#waitlist">Get early access <span>→</span></a>
+        </div>
+        <div class="hud-card" aria-label="Illustrative weather overlay">
+          <div class="hud-row"><span class="sun-icon">↗</span><div><strong>Wind 8 mph · NE</strong><small>Steady breeze · Court / course view</small></div></div>
+          <div class="hud-line"></div>
+          <div class="hud-row"><span>≋</span><div><strong>Gusts 13 mph</strong><small>Gust trend: increasing</small></div></div>
+          <div class="hud-line"></div>
+          <div class="hud-row"><span>◎</span><div><strong>Crosswind</strong><small>Check direction before your next shot</small></div></div>
+          <small class="sample-note">CONCEPT DISPLAY · NOT LIVE DATA</small>
+        </div>
+      </div>
+
+      <aside class="signup-card" id="waitlist">
+        <p class="eyebrow blue">META GLASSES ADD-ON</p>
+        <h2>SkyLens</h2>
+        <p class="card-subtitle">Wind Intelligence for Athletes</p>
+        <p class="price"><strong>$0.99</strong><span>/ month</span></p>
+        <p class="muted">Subscription add-on. Cancel anytime.</p>
+        <div class="card-divider"></div>
+        <h3>Be first in line.</h3>
+        <p class="muted">Get early access updates for a wind-focused companion designed for outdoor sports.</p>
+        <form id="waitlist-form">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="button button-primary" type="submit">Join the waitlist <span>→</span></button>
+          <p class="privacy">No spam. Just occasional SkyLens updates.</p>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </section>
+
+    <section class="intro section-wrap">
+      <div>
+        <p class="eyebrow blue">BUILT AROUND THE CONDITIONS</p>
+        <h2>Know what the wind is doing.<br>Stay focused on your sport.</h2>
+      </div>
+      <p>SkyLens is a planned software add-on for Meta Glasses that turns wind conditions into quick, glanceable context. Designed for golfers judging approach shots, tennis players reading crosswinds and serves, and outdoor athletes adapting to changing conditions. The product concept is in development; displayed values are illustrative.</p>
+    </section>
+
+    <section class="features section-wrap" id="features">
+      <div class="section-heading"><p class="eyebrow blue">WIND, MADE READABLE</p><h2>More than a weather number.</h2></div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-icon">↗</span><h3>Direction at a glance</h3><p>See where the wind is coming from relative to your current direction of play.</p></article>
+        <article class="feature"><span class="feature-icon">≋</span><h3>Gusts & variability</h3><p>Go beyond average speed with gust estimates and changing-condition cues.</p></article>
+        <article class="feature"><span class="feature-icon">◎</span><h3>Sport-aware context</h3><p>Concepts for golf shot planning, tennis crosswinds, running, and cycling.</p></article>
+        <article class="feature"><span class="feature-icon">⌖</span><h3>Local conditions</h3><p>Location-based wind and weather context, designed for quick hands-free checks.</p></article>
+      </div>
+    </section>
+
+    <section class="demo section-wrap" id="demo">
+      <div class="demo-image" id="wind-demo-stage">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85" alt="Landscape showing an illustrative wind visualization">
+        <canvas class="wind-canvas" id="wind-canvas" aria-label="Animated illustrative wind vectors moving across the landscape"></canvas>
+        <div class="wind-hud"><strong id="stage-wind-value">↗ 8 mph · NE</strong><span id="stage-wind-detail">Gusts 13 mph · illustrative</span></div>
+        <div class="wind-controls"><button id="wind-play-toggle" aria-pressed="true">Ⅱ Pause flow</button><button id="wind-vector-toggle" aria-pressed="true">↗ Vectors on</button><button id="wind-mode-cycle">Golf view ▾</button></div>
+        <button class="stage-open" id="play-demo" aria-label="Open interactive SkyLens concept demo">Explore wind view <span>↗</span></button>
+      </div>
+      <div class="demo-copy">
+        <p class="eyebrow blue">CONCEPT DEMO</p><h2>Keep your eyes<br>on the game.</h2>
+        <p>Explore how a glanceable wind readout could surface direction, average speed, gusts, and sport-specific context without pulling your attention away from the course, court, or trail.</p>
+        <button class="text-button" id="open-demo">Explore the demo <span>↗</span></button>
+        <p class="small-note">Demo interaction is illustrative and does not play a recorded product video.</p>
+      </div>
+    </section>
+
+    <section class="gallery section-wrap" id="gallery">
+      <div class="section-heading" id="sports"><p class="eyebrow blue">DESIGNED FOR OUTDOOR PLAY</p><h2>Different sports. Same changing wind.</h2></div>
+      <div class="gallery-grid">
+        <button class="gallery-card" data-title="Golf: read the breeze" data-description="A concept for wind direction, gusts, and conditions that may help golfers plan club and shot decisions. Always use your own judgment and course conditions."><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Sunny landscape"><span>01 / GOLF</span><h3>Read the breeze ↗</h3></button>
+        <button class="gallery-card" data-title="Tennis: spot the crosswind" data-description="A concept for quick wind cues that help players stay aware of crosswinds and changing court conditions."><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80" alt="Tennis court"><span>02 / TENNIS</span><h3>Spot the crosswind ↗</h3></button>
+        <button class="gallery-card" data-title="Outdoor endurance sports" data-description="For runners, cyclists, and other outdoor athletes who want wind direction and gust context along the route."><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80" alt="Deep space and stars"><span>03 / OUTDOOR ATHLETES</span><h3>Adapt to the conditions ↗</h3></button>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <p class="eyebrow">WIND AWARENESS, AT A GLANCE</p><h2>Get in early.</h2><p>Help shape a smarter wind companion for outdoor athletes.</p><a class="button button-light" href="#waitlist">Join the waitlist <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✦</span> SkyLens</a><span>Independent concept project. Not affiliated with or endorsed by Meta.</span><span>© <span id="year"></span> SkyLens</span></footer>
+
+  <dialog id="demo-dialog" class="modal">
+    <button class="modal-close" id="close-demo" aria-label="Close demo">×</button>
+    <p class="eyebrow blue">SKYLENS INTERACTIVE PREVIEW</p><h2 id="modal-title">Your world, with more in view.</h2>
+    <p id="modal-description">Choose a sport to preview how SkyLens could surface wind information on Meta Glasses.</p>
+    <div class="preview-screen">
+      <img class="preview-landscape" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=80" alt="Landscape background for wind-flow preview">
+      <canvas class="wind-canvas" id="modal-wind-canvas" aria-label="Animated wind flow visualization"></canvas>
+      <div class="preview-data"><span id="preview-symbol">↗</span><div><strong id="preview-value">Wind 8 mph · NE</strong><small id="preview-detail">Gusts 13 mph · Crosswind cue</small></div></div>
+      <small>SAMPLE WIND FLOW · CONCEPT ONLY</small>
+    </div>
+    <div class="preview-tabs"><button class="active" data-mode="golf">Golf</button><button data-mode="tennis">Tennis</button><button data-mode="outdoors">Outdoor</button></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
