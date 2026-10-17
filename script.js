@@ -1,19 +1,8 @@
-const form = document.querySelector('#waitlist-form');
-const emailInput = document.querySelector('#email');
-const message = document.querySelector('#form-message');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav nav');
 const dialog = document.querySelector('#demo-dialog');
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const email = emailInput.value.trim();
-  if (!emailInput.checkValidity() || !email) { message.textContent = 'Please enter a valid email address.'; message.classList.add('error'); emailInput.focus(); return; }
-  message.classList.remove('error');
-  message.textContent = `Thanks — ${email} is ready for the waitlist! This demo doesn't send or store signups yet.`;
-  form.querySelector('button[type="submit"]').textContent = 'You’re on the demo list ✓';
-});
 menuToggle.addEventListener('click', () => { const isOpen = nav.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', String(isOpen)); });
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); }));
 
